@@ -1,0 +1,19 @@
+.wrapper {
+    width: 110px;
+    height: 40px;
+    border: 1px solid grey;
+
+    font-size: 18px;
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.listItem {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.listItem:hover {
+    background-color: rgba(0, 191, 255, 0.23);
+}
