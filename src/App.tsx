@@ -1,6 +1,8 @@
-import {IndicatorWrapper} from "./onOffIndicator/IndicatorWrapper.tsx";
-import {MySelectorWrapper} from "./MySelector/MySelectorWrapper.tsx";
+
 import './App.css'
+import {MySelectorWrapper} from "./components/MySelector/MySelectorWrapper.tsx";
+import {IndicatorWrapper} from "./components/onOffIndicator/IndicatorWrapper.tsx";
+
 
 function App() {
 

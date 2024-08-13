@@ -1,4 +1,4 @@
-import {MySelectorWrapper} from "../../../src/MySelector/MySelectorWrapper";
+import {MySelectorWrapper} from "../../../src/components/MySelector/MySelectorWrapper";
 
 
 export default {

@@ -1,7 +1,7 @@
-import style from './MySelector.module.css'
 import {useState} from "react";
+import style from './MySelector.module.css'
 
-type CityDataType = {
+export type CityDataType = {
     id: number
     name: string
 }
@@ -25,18 +25,22 @@ export const MySelectorWrapper = () => {
     }
     const onClickHandler = (id: number) => {
         const selectedItem = items.find(i => i.id === id)
-      if(selectedItem){
-          setSelectedItem(selectedItem)
-      }
+        if (selectedItem) {
+            setSelectedItem(selectedItem)
+        }
+    }
+
+    const handleBlur = () => {
+        console.log("on blur")
     }
 
 
     return (
-        <div className={style.wrapper} onClick={openSelect}>
-            {isOpen ? (
-                    <div className={style.list}>{items.map((i, index) => <div key={index} className={style.listItem} onClick={() => onClickHandler(i.id)}>{i.name}</div>)}</div>)
-                :
-                <div className={style.listItem}>{selectedItem.name}</div>}
+        <div className={style.wrapper} onClick={openSelect} >
+            <div className={style.listItem}>{selectedItem.name}</div>
+            {isOpen && (
+                <div className={style.list} onBlur={handleBlur}>{items.map((i, index) => <div key={index} className={style.listItem} onClick={() => onClickHandler(i.id)}>{i.name}</div>)}</div>)
+            }
         </div>
     )
 }
